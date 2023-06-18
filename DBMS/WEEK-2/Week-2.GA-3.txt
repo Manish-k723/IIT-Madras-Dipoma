@@ -1,0 +1,6 @@
+--Write an SQL statement to find the names of players of the team: 'All Stars'.[Database: FLIS] flisdb:
+
+Select players.name
+FROM players
+join teams on teams.team_id = players.team_id
+WHERE teams.name = 'All Stars'
