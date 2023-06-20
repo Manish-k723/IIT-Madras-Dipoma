@@ -1,5 +1,0 @@
---Write an SQL statement to find the name and dob of the players whose jersey number is more than '70'.[Database: FLIS] flisdb:
-
-SELECT name, dob 
-FROM players
-WHERE jersey_no>70

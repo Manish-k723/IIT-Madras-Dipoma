@@ -1,5 +1,0 @@
--- Write an SQL statement to find the team_id of the players who were born before the year '2003'.[Database: FLIS] flisdb:
-
-SELECT team_id 
-FROM players
-WHERE extract(year from dob) <2003
