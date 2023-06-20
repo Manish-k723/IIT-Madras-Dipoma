@@ -1,0 +1,10 @@
+-- Write an SQL statement to find the name and date of birth of the youngest player in the team named 'Arawali'.[Database: FLIS]
+
+Select 
+    players.name, players.dob 
+from teams
+join players on 
+    players.team_id = teams.team_id
+where teams.name = 'Arawali' 
+order by players.dob desc
+limit 1

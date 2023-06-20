@@ -1,0 +1,8 @@
+-- Write an SQL statement to find the name and dob of the players who belongs from the team names 'Amigos' or 'Black Eagles'
+
+Select 
+	players.name, players.dob
+from teams
+join players on
+	players.team_id = teams.team_id
+where teams.name in ('Amigos', 'Black Eagles')

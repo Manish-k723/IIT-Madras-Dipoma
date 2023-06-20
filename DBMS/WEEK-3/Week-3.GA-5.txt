@@ -1,0 +1,9 @@
+--Write an SQL statement to find the book titles and the number of copies of the books which has the word 'Management' in their title.
+
+Select 
+    bct.title, count(bcp.isbn_no)
+from book_copies as bcp
+join book_catalogue as bct
+    on bct.isbn_no = bcp.isbn_no
+group by bcp.isbn_no, bct.title
+having bct.title like '%Management%'

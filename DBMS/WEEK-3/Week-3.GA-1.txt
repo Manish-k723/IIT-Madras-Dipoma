@@ -1,0 +1,10 @@
+--Write an SQL statement to find the match number of the match held on '2020-05-15' and the name of the fourth referee who refereed that match. Print match_num first, followed by respective fourth referee name. Note: fourth referee is to be obtained from the 'fourth_referee' attribute.[Database: FLIS]
+
+Select 
+    matches.match_num, referees.name 
+from matches
+join match_referees on 
+    matches.match_num = match_referees.match_num
+join referees on 
+    match_referees.fourth_referee = referees.referee_id
+where match_date =  '2020-05-15'

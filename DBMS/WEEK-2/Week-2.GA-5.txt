@@ -1,0 +1,5 @@
+--Write an SQL statement to find faculty ID of the faculty who belongs to the department:'Mechanical Engineering' and joined on '2016-04-08'.[Database: LIS] lisdb: 
+
+SELECT id 
+FROM faculty
+WHERE (department_code = 'ME') and (doj = '2016-04-08')
