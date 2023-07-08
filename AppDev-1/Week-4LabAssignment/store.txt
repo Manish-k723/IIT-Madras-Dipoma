@@ -1,0 +1,13 @@
+if request.method == "GET":
+        return render_template("home_template.html")
+    elif request.method == "POST":
+        id_value = request.form["id_value"]
+        sid = request.form["ID"]
+        # if sid=="student_id":
+        return render_template("display_details.html",sid, id_value)
+def Helloworld():
+    if request.method == "GET":
+        return render_template("get_details.html")
+    elif request.method == "POST":
+        user_name = request.form["name"]
+        return render_template("display_details.html", display_name = user_name)
